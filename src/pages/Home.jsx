@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CountdownTimer } from 'components/Countdown';
+import { CountdownTimer } from 'components/ui/Countdown';
 
 export function GamePage (){
     const [StartGame, setStartGame] = useState(false);

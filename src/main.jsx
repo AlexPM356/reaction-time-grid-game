@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Header } from 'components/HeaderBar';
+import { Header } from 'components/ui/HeaderBar';
 import { GamePage } from 'pages/Home';
 import 'assets/styles.css';
 

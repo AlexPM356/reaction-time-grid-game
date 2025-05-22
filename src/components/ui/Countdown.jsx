@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { GridGame } from 'components/Grid';
+import { Game } from 'components/Index';
 
 export function CountdownTimer () {
     const [count, setCount] = useState(3);
@@ -12,7 +12,7 @@ export function CountdownTimer () {
     }, [count]);
 
     return (
-        <section className="cd-countdown">{count > 0 ? count : <GridGame />}</section>
+        <section className="cd-countdown">{count > 0 ? count : <Game />}</section>
     )
     
 }
