@@ -1,12 +1,12 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Header } from 'components/ui/HeaderBar';
+import { SidebarArea } from 'components/ui/Sidebar';
 import { GamePage } from 'pages/Home';
 import 'assets/styles.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Header />
+    <SidebarArea />
     <GamePage />
   </StrictMode>
 )

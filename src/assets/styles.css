@@ -1,5 +1,6 @@
 :root {
     color-scheme: light dark;
+    --button-background: rgb(102, 160, 131);
 }
 html {
     font-family: system-ui, -apple-system, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -9,28 +10,37 @@ body {
     color: light-dark(#333b3c, #efefec);
     background-color: light-dark(#efedea, #161624);
 }
-h1 {
-    text-align: center;
+
+/* ============================================================================================ */
+/* SIDEBAR */
+.sidebar {
+    background: rgb(2, 122, 159);
+    position: fixed;
+    min-height: 100vh;
+    min-width: 25vw;
 }
-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.sidebar h1 {
+    cursor: default;
+    text-align: center;
 }
 
 /* ============================================================================================ */
 /* BUTTON */
 .start {
-    background: rgb(105, 208, 156);
+    background: var(--button-background);
+    border-radius: 8px;
     color: #161624;
+    cursor: pointer;
     font-size: 100px;
     padding: 0.8rem 1.5rem;
-    border-radius: 8px;
-    cursor: pointer;
     transition: all 0.3s ease;
+    position: absolute;
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%, -50%);
 }
 .stop {
-    background: rgb(105, 208, 156);
+    background: var(--button-background);
     color: #161624;
     font-size: 75px;
     border-radius: 8px;
@@ -38,12 +48,10 @@ main {
     transition: all 0.3s ease;
     position: absolute;
     right: 0;
-    bottom: 50vh;
 }
 .start:hover, .stop:hover {
     background: black;
     color: white;
-    transform: translateY(-2px);
 }
 
 /* ============================================================================================ */
@@ -51,13 +59,12 @@ main {
 .rt-grid {
     background: rgb(105, 92, 92);
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     display: grid;
-    gap: 15px;
+    gap: 10px;
     grid-auto-rows: 25vh;
     grid-template-columns: repeat(3, 1fr);
     min-width: 50vw;
-    padding: 20px;
+    padding: 15px;
 }
 .rt-grid div {
     background: #333b3c;
@@ -71,8 +78,9 @@ main {
 }
 .rt-grid .active {
     background: rgb(255, 255, 255);
-    transform: scale(0.95);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.rt-grid .active:hover {
+    transform: translateY(-3px);
 }
 
 .rt-grid .correct {
