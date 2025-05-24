@@ -15,14 +15,29 @@ body {
 /* SIDEBAR */
 .sidebar {
     background: rgb(2, 122, 159);
+    display: flex;
+    flex-direction: column;
     position: fixed;
     min-height: 100vh;
     min-width: 25vw;
+    transition: all 1s;
 }
 .sidebar h1 {
     cursor: default;
     text-align: center;
 }
+.sidebar-off {
+    display: none;
+}
+
+/* ============================================================================================ */
+/* RADIO BUTTONS/DIFFICULTY OPTIONS */
+.difficulty-options {
+    display: flex;
+    justify-content: space-around;
+    font-size: larger;
+}
+
 
 /* ============================================================================================ */
 /* BUTTON */
@@ -33,7 +48,7 @@ body {
     cursor: pointer;
     font-size: 100px;
     padding: 0.8rem 1.5rem;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
     position: absolute;
 	top: 50%;
 	left: 50%;
@@ -42,10 +57,10 @@ body {
 .stop {
     background: var(--button-background);
     color: #161624;
-    font-size: 75px;
+    font-size: 50px;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
     position: absolute;
     right: 0;
 }
@@ -113,11 +128,6 @@ body {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-ol {
-    font-size: x-large;
-    font-weight: bold;
-    color: rgb(0, 168, 253);
 }
 
 /* Responsive Design */
