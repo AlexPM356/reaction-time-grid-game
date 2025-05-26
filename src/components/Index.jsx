@@ -7,7 +7,6 @@ import { ACTION } from "data/reducerData";
 export function Game() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [startTime, setStartTime] = useState(Date.now());
-  const dataList = [];
 
   useEffect(() => {
     dispatch({ type: ACTION.RESET });
@@ -31,11 +30,10 @@ export function Game() {
     }, 2000);
   };
   
-  console.log(typeof(state.inputData))
 
   return (
     <>
-      {/* <UserResults dataResults={dataList} /> */}
+      <UserResults dataResults={state.inputData} />
       <GridLayout
         targetValue={state.targetValue}
         activeClass={state.activeClass}
